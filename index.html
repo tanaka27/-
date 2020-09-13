@@ -1,0 +1,130 @@
+<!doctype html>
+
+<html class="no-js" lang="">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>ルーレット</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <meta name="theme-color" content="#fafafa">
+  <style>
+    canvas{
+      position: absolute;
+      background-color:#add8e6;
+      right:0;
+      margin-top:10px;
+      margin-right: 10px;
+    }
+    button:focus {
+     outline:0;
+    }
+    .maker {
+      width:500px;
+      text-align: center;
+      padding:10px;
+     }
+     .Line{
+       border-right: solid 3px;
+       border-left: solid 3px;
+
+     }
+     .names{
+       border-right: solid 3px;
+
+     }
+     .values{
+        border-right: solid 3px;
+     }
+     .colors{
+       border-right: solid 3px;
+       border-left: solid 3px;
+     }
+     #addRow:active{
+       box-shadow: 0 0 0 0;
+       background-color: #7fff7f;
+     }
+     #disRow:active{
+       box-shadow: 0 0 0 0;
+       background-color: #ff7fff;
+     }
+     .buttons{
+       margin-top:10px;
+     }
+     #addRow{
+       margin-right: 10px;
+       background-color:#d6ffad;
+     }
+     #disRow{
+       background-color: #ff9eff;
+     }
+     button{
+       border-radius: 5px;
+       box-shadow:3px 3px 3px -3px;
+     }
+     .top{
+       border-bottom: double 5px;
+     }
+     input{
+       margin:5px;
+       border-radius: 3px;
+     }
+     .name{
+       border-right: solid 3px;
+     }
+     .value{
+       width:50px;
+     }
+     #rotation{
+       width: 100px;
+       height: 100px;
+       position:absolute;
+       top:660px;
+       right: 300px;
+       text-align: center;
+    }
+    #rote{
+      border-radius: 35px;
+      width:150px;
+      height: 50px;
+      background-color:#ff7aff;
+    }
+    #rote:active{
+      box-shadow: 0 0 0 0;
+      background-color: #bc7aff;
+    }
+    .active:active{
+      background-color: #ff007f;
+    }
+  </style>
+
+</head>
+
+<body>
+<canvas id="myCanvas" width="720" height="600"></canvas>
+<div class="maker">
+
+  <table border="1" class="form" id="table">
+    <tr class="Line top"><td class="name">名前</td></td><td class="values" >割合(0~100)</td><td class="colors">色</td></tr>
+    <tr class="Line"><td class="name"><input type="text" maxlength="20" class="named"></td><td class="values"><input type="text" class="value" value="0"> </td><td class="colors"><input type="color" maxlength="10" class="color"></td></tr>
+  </table>
+  <div class="buttons">
+    <button type="button" id="addRow">追加</button>
+    <button type="button" id="disRow">消去</button>
+  </div>
+</div>
+<div class="start" id=rotation>
+  <button type="button" id="rote">START</button>
+</div>
+<script src="app.js"></script>
+</body>
+
+</html>
